@@ -2,7 +2,7 @@
 
 <html>
 	<head>
-		<title>Chatter</title>
+		<title>example1</title>
 		<style>
 			body {
 				background-color: #001;
@@ -12,32 +12,13 @@
 			}
 
 			p {
-				font-size: 20px;
+				font-size: 80px;
 			}
-
-			.user {
-				color: #15f4ee;
-			}
-
-			.message {
-				color: #39FF14;
-			}
-
 		</style>
 	</head>
 
 	<body>
-		<h1>leave a message</h1>
-		<form action="/postMessage" id="messagePoster" method="POST">
-			<label for="name">your name: </label><br />
-			<input type="text" id="name" name="name"><br /><br />
-			<label for="message">your message: </label><br />
-			<textarea id="message" name="message"></textarea><br /><br />
-			<input type="submit" value="Post">
-		</form>
-		<h1>previous messages are below</h1>
-		{% for message in messages %}
-			<p><span class="user">{{message.name}}</span>: <span class="message">{{message.message}}</span></p>
-		{% endfor %}
+		<h1>this is rajdeep</h1>
+		<p>{{name}}</p>
 	</body>
 </html>

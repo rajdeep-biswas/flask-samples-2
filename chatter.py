@@ -13,7 +13,7 @@ def write_json(data, filename):
 def myService():
 	with open(jsonfilename, 'r') as openfile:
 		jsonObject = json.load(openfile)
-	return render_template("example.html", messages = jsonObject["messages"])
+	return render_template("chatter.html", messages = jsonObject["messages"])
 
 @newApp.route("/postMessage", methods = ["POST"])
 def postMessage():
@@ -30,5 +30,5 @@ def postMessage():
 			temp.append(newMessage)
 
 		write_json(data, jsonfilename)
-		
+
 	return redirect("/")
